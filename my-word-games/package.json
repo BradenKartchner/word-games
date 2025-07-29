@@ -10,6 +10,7 @@
     "test": "vitest run"
   },
   "dependencies": {
+    "@radix-ui/themes": "^3.2.1",
     "@tailwindcss/vite": "^4.1.11",
     "@tanstack/react-router": "^1.130.2",
     "@tanstack/react-router-devtools": "^1.130.2",
