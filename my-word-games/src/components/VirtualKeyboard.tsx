@@ -13,18 +13,23 @@ const VirtualKeyboard = () => {
 		console.log(target.id);
 	};
 	return (
-		<Flex direction={"column"}>
-			{Object.values(keyboardRows).map((entry) => {
+		<Flex direction={"column"} gapY="1">
+			{Object.values(keyboardRows).map((entry, index) => {
 				return (
-					<Flex key={`${entry[0]}1`}>
+					<Flex
+						key={`${entry[0]}1`}
+						gapX="1"
+						className={index === 1 ? "ml-6" : "mx-2"}
+					>
 						{entry.map((letter) => (
-							<Button
+							<button
 								key={`${letter}0`}
 								id={letter}
 								onClick={handleClick}
+								className="bg-neutral-500"
 							>
 								{letter}
-							</Button>
+							</button>
 						))}
 					</Flex>
 				);

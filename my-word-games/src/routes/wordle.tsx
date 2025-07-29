@@ -8,10 +8,9 @@ export const Route = createFileRoute("/wordle")({
 
 function Wordle() {
 	return (
-		<div className="w-full h-full min-h-screen flex items-center">
+		<div className="w-full h-full min-h-screen flex items-center mx-1">
 			<div className="flex flex-col items-center w-full">
 				<div>Hello</div>
-				<Button>My button</Button>
 				<VirtualKeyboard />
 			</div>
 		</div>
