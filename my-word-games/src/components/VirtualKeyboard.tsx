@@ -1,5 +1,6 @@
 import React from "react";
 import { Flex, Button } from "@radix-ui/themes";
+import VirtualKeyboardButton from "./VirtualKeyboardButton";
 
 const keyboardRows = {
 	rowOne: ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
@@ -22,14 +23,11 @@ const VirtualKeyboard = () => {
 						className={index === 1 ? "ml-6" : "mx-2"}
 					>
 						{entry.map((letter) => (
-							<button
+							<VirtualKeyboardButton
+								letter={letter}
+								background={"bg-neutral-500"}
 								key={`${letter}0`}
-								id={letter}
-								onClick={handleClick}
-								className="bg-neutral-500"
-							>
-								{letter}
-							</button>
+							/>
 						))}
 					</Flex>
 				);
